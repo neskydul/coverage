@@ -5,7 +5,6 @@ import os
 import zipfile
 import yaml
  
-from inference_assistant import inference
 from utils import create_assistant_from_config_file, upload_to_openai, export_assistant
 from exportChat import export_chat
 
