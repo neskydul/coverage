@@ -5,8 +5,11 @@ import os
 import zipfile
 import yaml
  
+from inference_assistant import inference
 from utils import create_assistant_from_config_file, upload_to_openai, export_assistant
 from exportChat import export_chat
+
+
 
 st.set_page_config(
     page_title="MVP",
@@ -17,6 +20,16 @@ st.set_page_config(
         #'Report a bug': "https://github.com/IntelligenzaArtificiale/Build-Share-Sell-OpenAI-Assistants-API/issues",
         #'About': "# This is a simple web app to build, share and sell OpenAI Assistants API\n\n"
     #}
+)
+st.markdown(
+    """
+    <style>
+    .stActionButton, #MainMenu, button[class^='styles_terminalButton'] {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 st.title("MVP🤖")
